@@ -70,13 +70,33 @@ console.log(average); // Esperado: 8
 
 // 2. ¿Es administrador?
 const role = 'admin';
-const isAdmin = role === 'Admin';
+const isAdmin = role.toLowerCase() === 'admin';
 console.log(isAdmin); // Esperado: true, aunque el rol venga en minúsculas o mayúsculas
 
 // 3. ¿Es mayor de edad?
-const age = '18';
+const age = 18;
 const isAdult = age === 18 || age > 18;
 console.log(isAdult); // Esperado: true
+
+//Ejercicio 4 (medio) · Refactoriza el código de Rodofasio
+const userName = 'Rodofasio';
+const unreadMessages = 3;
+const isOnline = true;
+const isBlocked = false;
+const country = 'Francia';
+
+const welcome = `"Hola, ${userName}. Tienes ${unreadMessages} mensajes sin leer."`
+
+const canChat = isOnline && !isBlocked
+
+const isForeign = country !=='España';
+
+console.log(welcome);
+console.log(canChat, isForeign);
+
+//Ejercicio 5 (reto) · El reloj del microondas
+const totalSecond 135
+
 
 
 
