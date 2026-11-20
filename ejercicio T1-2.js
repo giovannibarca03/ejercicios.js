@@ -38,6 +38,19 @@ const isValidUsername =
 
 console.log(isValidUsername); // true
 
+function isValidUsername(username) {
+    const isValid = username.length >= 3 && username.length <= 15 && !username.startsWith("_");
+    console.log(isValid);
+}
+
+isValidUsername("giovanni99");
+
+function isValidUsername(username) {
+    return username.length >= 3 && username.length <= 15 && !username.startsWith("_");
+}
+
+console.log ((isValidUsername)("godo"))
+
 ----------------------------------------------------------------------------------------------------------------------------------
 
 //Ejercicio 1 (básico) · Los caramelos de la tía Rutofisia
@@ -59,6 +72,17 @@ const needsMorePlayers = players < 4;
 
 console.log(canPlay);          // true
 console.log(needsMorePlayers); // false
+
+
+const hasCourt = true;
+const players = 4;
+const isRaining = false;
+
+function canPlay(hasCourt, players, isRaining) {
+    return hasCourt && players === 4 && !isRaining;
+}
+
+console.log(canPlay(hasCourt, players, isRaining));
 
 
 //Ejercicio 3 (medio) · Encuentra los bugs
